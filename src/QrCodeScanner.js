@@ -7,10 +7,10 @@ export default function QrCodeScanner() {
   useEffect(() => {
     const scanner = new Html5QrcodeScanner("reader", {
       qrbox: {
-        width: 150,
-        height: 150,
+        width: 250,
+        height: 250,
       },
-      fps: 15,
+      fps: 5,
     });
 
     scanner.render(success, error);
@@ -36,7 +36,7 @@ export default function QrCodeScanner() {
           <div id="reader"> </div>
       }
 
-      <div id="reader" style={{maxWidth: '1.5rem'}}></div>
+      <div id="reader" ></div>
     </>
   );
 }
